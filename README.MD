@@ -85,6 +85,14 @@ netstat -ano | findstr :5101
 ```bash
 taskkill /F /PID <NUMERO_DO_PID>
 ```
+Exemplo de como as portas devem estar para funcionar 
+```bash
+PS C:\Windows\system32> netstat -ano | findstr :4001
+  TCP    0.0.0.0:4001           0.0.0.0:0              LISTENING       9828
+  TCP    127.0.0.1:4001         0.0.0.0:0              LISTENING       18884
+  TCP    [::]:4001              [::]:0                 LISTENING       9828
+  TCP    [::1]:4001             [::]:0                 LISTENING       18884
+```
 
 #### 🧪 Executar Endpoints 
 - Importar Coleção de testes que contém na pasta Postman **Redis Gateway Cache Example.postman_collection.json**
