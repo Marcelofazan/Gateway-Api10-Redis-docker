@@ -4,7 +4,7 @@ Exemplo de utilização de criação de ApiGateway com utilização de cache Red
 | Tecnologia | Descrição |
 |-----------|-----------|
 | **BFF** | Arquitetura que cria um servidor back-end exclusivo para atender a uma interface específica. |
-| **Ocelot** | ponto de entrada único para o seu sistema, interceptando requisições e roteando-as para os microsserviços adequados |
+| **Ocelot** | ponto de entrada único para o seu sistema, interceptando requisições e roteando-as para os microsserviços adequados servindo como proxy reverso|
 | **Redis** | Banco de dados em memória (RAM) de altíssima velocidade. |
 
 #### 📁 Requisitos do Projeto
