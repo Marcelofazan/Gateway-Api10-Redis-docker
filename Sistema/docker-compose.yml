@@ -1,0 +1,33 @@
+
+services:
+ 
+  redisdata:
+    container_name: redis-data
+    image: redis:alpine
+
+  sistema.agrupador.api:
+    image: ${DOCKER_REGISTRY-}sistemaagrupadorapi
+    build:
+      context: .
+      dockerfile: Services/Agrupador/Sistema.Agrupador.API/Dockerfile
+
+  sistema.produto.api:
+    image: ${DOCKER_REGISTRY-}sistemaprodutoapi
+    build:
+      context: .
+      dockerfile: Services/Produto/Sistema.Produto.API/Dockerfile
+
+
+  sistema.pessoa.api:
+    image: ${DOCKER_REGISTRY-}sistemapessoaapi
+    build:
+      context: .
+      dockerfile: Services/Pessoa/Sistema.Pessoa.API/Dockerfile
+
+
+  sistema.apigateway:
+    image: ${DOCKER_REGISTRY-}sistemaapigateway
+    build:
+      context: .
+      dockerfile: ApiGateways/Base/Sistema.ApiGateway/Dockerfile
+

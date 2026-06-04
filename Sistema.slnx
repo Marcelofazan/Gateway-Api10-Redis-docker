@@ -1,0 +1,25 @@
+<Solution>
+  <Folder Name="/ApiGateways/" />
+  <Folder Name="/ApiGateways/Base/">
+    <Project Path="Sistema/ApiGateways/Base/Sistema.ApiGateway/Sistema.ApiGateway.csproj" />
+  </Folder>
+  <Folder Name="/Infra/">
+    <Project Path="Sistema/Infra/Sistema.Infra.Redis/Sistema.Infra.Redis.csproj" />
+  </Folder>
+  <Folder Name="/Services/" />
+  <Folder Name="/Services/Agrupador/">
+    <Project Path="Sistema/Services/Agrupador/Sistema.Agrupador.API/Sistema.Agrupador.API.csproj" />
+  </Folder>
+  <Folder Name="/Services/Pessoa/">
+    <Project Path="Sistema/Services/Pessoa/Aplicacao/Aplicacao/Aplicacao.csproj" Id="c7c42dfb-eaaf-4ca4-b225-2748c31fd697" />
+    <Project Path="Sistema/Services/Pessoa/Dominio/Dominio.csproj" />
+    <Project Path="Sistema/Services/Pessoa/InfraEstrutura/InfraEstrutura.csproj" />
+    <Project Path="Sistema/Services/Pessoa/Sistema.Pessoa.API/Sistema.Pessoa.API.csproj" />
+  </Folder>
+  <Folder Name="/Services/Produto/">
+    <Project Path="Sistema/Services/Produto/Aplicacao/Aplicacao/Aplicacao.csproj" Id="2a733b37-b26c-4f5f-b15b-9cb15b6518d9" />
+    <Project Path="Sistema/Services/Produto/Dominio/Dominio.csproj" />
+    <Project Path="Sistema/Services/Produto/InfraEstrutura/InfraEstrutura.csproj" />
+    <Project Path="Sistema/Services/Produto/Sistema.Produto.API/Sistema.Produto.API.csproj" />
+  </Folder>
+</Solution>

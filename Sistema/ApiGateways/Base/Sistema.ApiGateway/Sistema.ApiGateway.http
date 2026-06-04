@@ -1,0 +1,6 @@
+@Sistema.ApiGateway_HostAddress = http://localhost:5032
+
+GET {{Sistema.ApiGateway_HostAddress}}/weatherforecast/
+Accept: application/json
+
+###

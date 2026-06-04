@@ -1,0 +1,68 @@
+
+services:
+
+  redisdata:
+    ports:
+      - "6379:6379"
+    volumes:
+      - micro-redisdata:/data
+
+  sistema.agrupador.api:
+    environment:
+      - ASPNETCORE_ENVIRONMENT=Development
+      - ASPNETCORE_URLS=https://+:443;http://+:80
+      - ASPNETCORE_HTTPS_PORT= 6001
+      - ASPNETCORE_Kestrel__Certificates__Default__Password=pa55w0rd
+      - ASPNETCORE_Kestrel__Certificates__Default__Path=/root/.dotnet/corefx/cryptography/x509stores/mycerts/webApi.pfx
+      - ConnectionStrings__Redis=redisdata
+    ports:
+      - 6000:80
+      - 6001:443
+    depends_on:
+      - redisdata
+    volumes:
+      - ${USERPROFILE}\.dotnet\corefx\cryptography\x509stores\mycerts:/root/.dotnet/corefx/cryptography/x509stores/mycerts:ro
+
+  sistema.produto.api:
+    environment:
+      - ASPNETCORE_ENVIRONMENT=Development
+      - ASPNETCORE_URLS=https://+:443;http://+:80
+      - ASPNETCORE_HTTPS_PORT= 4001
+      - ASPNETCORE_Kestrel__Certificates__Default__Password=pa55w0rd
+      - ASPNETCORE_Kestrel__Certificates__Default__Path=/root/.dotnet/corefx/cryptography/x509stores/mycerts/webApi.pfx
+    ports:
+      - "4000:80"
+      - "4001:443"
+    volumes:
+      - ${USERPROFILE}\.dotnet\corefx\cryptography\x509stores\mycerts:/root/.dotnet/corefx/cryptography/x509stores/mycerts:ro
+
+  sistema.pessoa.api:
+    environment:
+      - ASPNETCORE_ENVIRONMENT=Development
+      - ASPNETCORE_URLS=https://+:443;http://+:80
+      - ASPNETCORE_HTTPS_PORT= 3001
+      - ASPNETCORE_Kestrel__Certificates__Default__Password=pa55w0rd
+      - ASPNETCORE_Kestrel__Certificates__Default__Path=/root/.dotnet/corefx/cryptography/x509stores/mycerts/webApi.pfx
+    ports:
+      - "3000:80"
+      - "3001:443"
+    volumes:
+      - ${USERPROFILE}\.dotnet\corefx\cryptography\x509stores\mycerts:/root/.dotnet/corefx/cryptography/x509stores/mycerts:ro
+
+  sistema.apigateway:
+    environment:
+      - ASPNETCORE_ENVIRONMENT=Development
+      - ASPNETCORE_URLS=https://+:443;http://+:80
+      - ASPNETCORE_HTTPS_PORT= 5101
+      - ASPNETCORE_Kestrel__Certificates__Default__Password=pa55w0rd
+      - ASPNETCORE_Kestrel__Certificates__Default__Path=/root/.dotnet/corefx/cryptography/x509stores/mycerts/webApi.pfx
+    ports:
+      - 5100:80
+      - 5101:443
+    volumes:
+      - ./ApiGateways\Web.Bff\ApiGateway:/app/configuration
+      - ${USERPROFILE}\.dotnet\corefx\cryptography\x509stores\mycerts:/root/.dotnet/corefx/cryptography/x509stores/mycerts:ro
+
+volumes:
+  micro-redisdata:
+    external: false

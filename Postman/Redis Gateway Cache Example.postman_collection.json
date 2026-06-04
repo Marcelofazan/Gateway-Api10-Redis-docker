@@ -1,0 +1,245 @@
+{
+  "info": {
+    "_postman_id": "2adc06df-f34a-41cc-a260-6d8417fddc9a",
+    "name": "Redis Gateway Cache Example",
+    "schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json",
+    "_exporter_id": "53858813",
+    "_collection_link": "https://go.postman.co/collection/53858813-2adc06df-f34a-41cc-a260-6d8417fddc9a?source=collection_link"
+  },
+  "item": [
+    {
+      "name": "Gateway",
+      "item": [
+        {
+          "name": "GET All Pessoas - API gateway",
+          "request": {
+            "method": "GET",
+            "header": [],
+            "url": {
+              "raw": "https://localhost:5101/produto-api/v1/produtos",
+              "protocol": "https",
+              "host": [
+                "localhost"
+              ],
+              "port": "5101",
+              "path": [
+                "produto-api",
+                "v1",
+                "produtos"
+              ]
+            }
+          },
+          "response": []
+        },
+        {
+          "name": "GET All Produtos - API gateway",
+          "request": {
+            "method": "GET",
+            "header": [],
+            "url": {
+              "raw": "https://localhost:5101/pessoa-api/v1/pessoas",
+              "protocol": "https",
+              "host": [
+                "localhost"
+              ],
+              "port": "5101",
+              "path": [
+                "pessoa-api",
+                "v1",
+                "pessoas"
+              ]
+            }
+          },
+          "response": []
+        },
+        {
+          "name": "ADD Agrupador - API gateway",
+          "request": {
+            "method": "POST",
+            "header": [],
+            "body": {
+              "mode": "raw",
+              "raw": "{\r\n    \"produtoId\": \"1673a9fd-191a-479c-a41f-3dc5611aa98e\",\r\n    \"pessoaId\": \"3673a9fd-191a-479c-a41f-3dc5611aa77d\"\r\n}",
+              "options": {
+                "raw": {
+                  "language": "json"
+                }
+              }
+            },
+            "url": {
+              "raw": "https://localhost:5101/agrupador-api/v1/agrupador",
+              "protocol": "https",
+              "host": [
+                "localhost"
+              ],
+              "port": "5101",
+              "path": [
+                "agrupador-api",
+                "v1",
+                "agrupador"
+              ]
+            }
+          },
+          "response": []
+        },
+        {
+          "name": "GET Agrupador - API gateway",
+          "request": {
+            "method": "GET",
+            "header": [],
+            "url": {
+              "raw": "https://localhost:5101/agrupador-api/v1/agrupador/pessoa/3673a9fd-191a-479c-a41f-3dc5611aa77d",
+              "protocol": "https",
+              "host": [
+                "localhost"
+              ],
+              "port": "5101",
+              "path": [
+                "agrupador-api",
+                "v1",
+                "agrupador",
+                "pessoa",
+                "3673a9fd-191a-479c-a41f-3dc5611aa77d"
+              ]
+            }
+          },
+          "response": []
+        }
+      ]
+    },
+    {
+      "name": "Produtos",
+      "item": [
+        {
+          "name": "GET All Produtos",
+          "request": {
+            "method": "GET",
+            "header": [],
+            "url": {
+              "raw": "https://localhost:4001/api/v1/produtos",
+              "protocol": "https",
+              "host": [
+                "localhost"
+              ],
+              "port": "4001",
+              "path": [
+                "api",
+                "v1",
+                "produtos"
+              ]
+            }
+          },
+          "response": []
+        }
+      ]
+    },
+    {
+      "name": "Pessoas",
+      "item": [
+        {
+          "name": "GET All Pessoas",
+          "request": {
+            "method": "GET",
+            "header": [],
+            "url": {
+              "raw": "https://localhost:3001/api/v1/pessoas",
+              "protocol": "https",
+              "host": [
+                "localhost"
+              ],
+              "port": "3001",
+              "path": [
+                "api",
+                "v1",
+                "pessoas"
+              ]
+            }
+          },
+          "response": []
+        }
+      ]
+    },
+    {
+      "name": "Agrupador",
+      "item": [
+        {
+          "name": "GET Agrupador",
+          "request": {
+            "method": "GET",
+            "header": [],
+            "url": {
+              "raw": "https://localhost:6001/api/v1/agrupador/pessoa/3673a9fd-191a-479c-a41f-3dc5611aa77d",
+              "protocol": "https",
+              "host": [
+                "localhost"
+              ],
+              "port": "6001",
+              "path": [
+                "api",
+                "v1",
+                "agrupador",
+                "pessoa",
+                "3673a9fd-191a-479c-a41f-3dc5611aa77d"
+              ]
+            }
+          },
+          "response": []
+        },
+        {
+          "name": "ADD Agrupador",
+          "request": {
+            "method": "POST",
+            "header": [],
+            "body": {
+              "mode": "raw",
+              "raw": "{\r\n    \"bookId\": \"1673a9fd-191a-479c-a41f-3dc5611aa98e\",\r\n    \"studentId\": \"3673a9fd-191a-479c-a41f-3dc5611aa77d\"\r\n}",
+              "options": {
+                "raw": {
+                  "language": "json"
+                }
+              }
+            },
+            "url": {
+              "raw": "https://localhost:6001/api/v1/agrupador",
+              "protocol": "https",
+              "host": [
+                "localhost"
+              ],
+              "port": "6001",
+              "path": [
+                "api",
+                "v1",
+                "agrupador"
+              ]
+            }
+          },
+          "response": []
+        }
+      ]
+    }
+  ],
+  "event": [
+    {
+      "listen": "prerequest",
+      "script": {
+        "type": "text/javascript",
+        "packages": {},
+        "requests": {},
+        "exec": [
+          ""
+        ]
+      }
+    },
+    {
+      "listen": "test",
+      "script": {
+        "type": "text/javascript",
+        "packages": {},
+        "requests": {},
+        "exec": [
+          ""
+        ]
+      }
+    }
+  ]
+}
