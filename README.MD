@@ -1,4 +1,4 @@
-## 🚀 ApiGateway10-RedisCache-docker
+## 🌐 ApiGateway10-RedisCache-docker
 Exemplo de utilização de criação de ApiGateway com utilização de cache Redis.
 
 | Tecnologia | Descrição |
