@@ -1,5 +1,5 @@
 ## 🌐 Gateway-Api10-Redis-docker
-Exemplo de Gateway Api BFF com Redis como cache em C# ASP.NET Core 10.
+Exemplo de Gateway Api com Redis como cache em C# ASP.NET Core 10.
 
 #### 📋 O que você vai encontrar neste projeto
 
