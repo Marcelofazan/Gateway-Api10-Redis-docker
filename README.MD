@@ -66,6 +66,37 @@ cd Sistema
 docker compose down --volumes --remove-orphans --timeout 0
 ```
 
+#### 🧪 Executar Endpoints 
+- Importar Coleção de testes que contém no diretório Postman 
+**Redis Gateway Cache Example.postman_collection.json**
+
+#### 🔍 Redis
+- Abra o terminal: Abra o Prompt de Comando (CMD) ou PowerShell no Windows.
+
+- Inicie o cliente: Digite o comando abaixo e pressione Enter:
+```bash
+memurai-cli
+```
+
+- Teste a conexão: Digite **PING** e aperte Enter. O servidor responderá **PONG**
+
+Para buscar chaves no Redis
+```bash
+KEYS *Pessoa_Agrupador*
+```
+
+Retornar todos os campos e valores de um hash armazenado em uma chave específica.
+```bash
+HGETALL "Sistema_development_Pessoa_Agrupador_3673a9fd-191a-479c-a41f-3dc5611aa77d"
+```
+
+Exibir somente Json de um hash armazenado em uma chave específica.
+```bash
+HGET "Sistema_development_Pessoa_Agrupador_3673a9fd-191a-479c-a41f-3dc5611aa77d" data
+```
+
+#### ⚙️ Configuração de conflito de portas 
+
 - Caso haja falha de compilação por Portas ocupadas, rastrear portas no PowerShell e fecha-las.
 ```bash
 netstat -ano | findstr :3000 
@@ -95,33 +126,4 @@ PS C:\Windows\system32> netstat -ano | findstr :4001
   TCP    127.0.0.1:4001         0.0.0.0:0              LISTENING       18884
   TCP    [::]:4001              [::]:0                 LISTENING       9828
   TCP    [::1]:4001             [::]:0                 LISTENING       18884
-```
-
-#### 🧪 Executar Endpoints 
-- Importar Coleção de testes que contém no diretório Postman 
-**Redis Gateway Cache Example.postman_collection.json**
-
-#### 🔍 Redis
-- Abra o terminal: Abra o Prompt de Comando (CMD) ou PowerShell no Windows.
-
-- Inicie o cliente: Digite o comando abaixo e pressione Enter:
-```bash
-memurai-cli
-```
-
-- Teste a conexão: Digite **PING** e aperte Enter. O servidor responderá **PONG**
-
-Para buscar chaves no Redis
-```bash
-KEYS *Pessoa_Agrupador*
-```
-
-Retornar todos os campos e valores de um hash armazenado em uma chave específica.
-```bash
-HGETALL "Sistema_development_Pessoa_Agrupador_3673a9fd-191a-479c-a41f-3dc5611aa77d"
-```
-
-Exibir somente Json de um hash armazenado em uma chave específica.
-```bash
-HGET "Sistema_development_Pessoa_Agrupador_3673a9fd-191a-479c-a41f-3dc5611aa77d" data
 ```
