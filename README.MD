@@ -10,7 +10,7 @@ Exemplo de Gateway Api com Redis como cache em C# ASP.NET Core 10.
 | **Ocelot** | Ponto de entrada único para o seu sistema, interceptando requisições e roteando-as para os microsserviços adequados servindo como proxy reverso|
 | **Redis** | Banco de dados em memória (RAM) de altíssima velocidade. |
 
-#### Requisitos do Projeto
+#### 💬 Requisitos do Projeto
 - Limpe os certificados existentes e Gere e confie em um novo certificado local
 ```bash
 dotnet dev-certs https --clean
