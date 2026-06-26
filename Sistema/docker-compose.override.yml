@@ -45,8 +45,9 @@ services:
       - ASPNETCORE_Kestrel__Certificates__Default__Path=/root/.dotnet/corefx/cryptography/x509stores/mycerts/webApi.pfx
     ports:
       - "3000:80"
-      - "3001:443"
+      - "3001:443" 
     volumes:
+      - ./ApiGateways\Web.Bff\ApiGateway:/app/configuration
       - ${USERPROFILE}\.dotnet\corefx\cryptography\x509stores\mycerts:/root/.dotnet/corefx/cryptography/x509stores/mycerts:ro
 
   sistema.apigateway:
@@ -59,6 +60,8 @@ services:
     ports:
       - 5100:80
       - 5101:443
+    extra_hosts:
+      - "host.docker.internal:host-gateway" # Mantido aqui para suportar a rota coringa (porta 1000)
     volumes:
       - ./ApiGateways\Web.Bff\ApiGateway:/app/configuration
       - ${USERPROFILE}\.dotnet\corefx\cryptography\x509stores\mycerts:/root/.dotnet/corefx/cryptography/x509stores/mycerts:ro
