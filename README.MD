@@ -21,7 +21,7 @@ VSCode Terminal [1] - Abrir Container
 cd Sistema
 docker-compose up --build  
 ```
-VSCode Terminal [6] - Fechar Container
+VSCode Terminal [2] - Fechar Container
 ```bash
 cd Sistema
 docker compose down --volumes --remove-orphans --timeout 0
@@ -30,25 +30,25 @@ docker compose down
 ```
 
 #### 🔄 Executar a aplicação Desenvolvimento Local
-VSCode Terminal [2]
+VSCode Terminal [1]
 ```bash
 cd Sistema/Services/Pessoa/Sistema.Pessoa.API
 dotnet run
 ```
 
-VSCode Terminal [3]
+VSCode Terminal [2]
 ```bash
 cd Sistema/Services/Produto/Sistema.Produto.API
 dotnet run
 ```
 
-VSCode Terminal [4]
+VSCode Terminal [3]
 ```bash
 cd Sistema/Services/Agrupador/Sistema.Agrupador.API
 dotnet run
 ```
 
-VSCode Terminal [5]
+VSCode Terminal [4]
 ```bash
 cd Sistema/ApiGateways/Base/Sistema.ApiGateway
 dotnet run
