@@ -1,4 +1,4 @@
-## 🌐 Gateway-Api10-Redis-docker
+## 🌐 Gateway-Redis-Api10-docker
 Exemplo de ApiGateway TLS/SSL com Redis como cache em C# ASP.NET Core 10.
 
 #### 📋 O que você vai encontrar neste projeto
